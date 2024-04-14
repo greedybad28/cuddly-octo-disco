@@ -30,34 +30,32 @@ print("Welcome to Journal File creator for Obsidian")
 #         pathh = f"/home/greedybad/Desktop/test/filename - {i}.txt"
 #         os.open(path=pathh,flags=os.O_CREAT)
 #         print(f"Created file {i}.txt")
+############################################################3
 time_now =  datetime.datetime.now()
 month = int(time_now.strftime("%m"))
-print(month)
 if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month == 10 or month == 12:
     max_day_value = 31
 elif month == 4 or month == 6 or month == 9 or month == 11:
     max_day_value = 30
-
-
-print(max_day_value)
-
-
+##################################################### I mean.. why are these up here??
 # time_now =datetime.datetime.now()
 # print()
 
 
 def ubuntu_filery():
-    date = time_now.strftime("%d")
-    no_of_files = int(input("Enter the number of files you need : "))
+    date = int(time_now.strftime("%d"))
     files_needed = max_day_value - date
     print(f"You would need {files_needed} more files to suffice for this month's journal Progress.\n") 
-    decision = str(input(f"DO you wanna continue makng {files_needed} files ??\n type YES or NO"))
+    decision = str(input(f"DO you wanna continue makng {files_needed} files ??\n type YES or NO : "))
     if decision== "YES" or "yes" or "Yes":
+        input_path = str(input("Enter the path you need to create the files in\n Please use '/' when seperating directories\n \nEg:home/user/Desktop/test/ \n \n Make sure you end with a slash(/) \n \n Enter your path : "))
         for i in range(date,max_day_value+1):
-            pathh = f"home/greedybad/Desktop/test/filename-{date}.{month}.2024.md"
+            pathh = f"{input_path}filename-{i}.{month}.2024.md"
             os.open(path=pathh,flags=os.O_CREAT)
-            print(f"Created the file ")
+            print(f"Created the file filename-{i}.{month}.2024.md")
+        print(f"All the files are stored in the path - {pathh[:-21]} ")
     else:
+       
        print("Pinne enthina myre program run aakye")
 
 def windows_filery():
@@ -67,11 +65,11 @@ def windows_filery():
     print(f"You would need {num_of_files} more files to suffice for this month's journal Progress....")
     decision = str(input("Do you want to continue making {files_needed} files\n TYPE YES OR NO : "))
     if decision == "YES" or "Yes" or "yes":
-        input_path = str(input("Enter the path you need to create the files in\n N.B : Please use '/' when seperating directories with a slash :  "))
+        input_path = str(input("Enter the path you need to create the files in\n N.B : Please use '/' when seperating directories with a slash\n\ \nexampple : R:/   Enter your Path : "))
         for i in range(date,max_day_value+1):
-            pathh = f"filename.{i}.{month}.2024.md"
+            pathh = f"{input_path}filename.{i}.{month}.2024.md"
             os.open(path=pathh,flags=os.O_CREAT)
-            print(f"Created the file {pathh[10:]} ")
+            print(f"Created the file filename-{i} ")
     else:
         print("WHY BRO WHYYY")
 if os.name == "nt":
@@ -79,6 +77,8 @@ if os.name == "nt":
     time.sleep(1)
     windows_filery()
 else:
+    print("Detected that you're on an a Unix based system, Continuing with Unix based script")
+    time.sleep(1)
     ubuntu_filery()
 
 
