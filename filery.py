@@ -69,7 +69,7 @@ def windows_filery():
         for i in range(date,max_day_value+1):
             pathh = f"{input_path}filename.{i}.{month}.2024.md"
             os.open(path=pathh,flags=os.O_CREAT)
-            print(f"Created the file filename-{i} ")
+            print(f"Created the file filename-{i}.{month}.2024.md ")
     else:
         print("WHY BRO WHYYY")
 if os.name == "nt":
