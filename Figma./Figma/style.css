@@ -1,0 +1,53 @@
+*{
+    font-family: josefin sans;
+}
+
+.logo{
+    padding-left: 16px;
+    padding-top: 16px;
+}
+
+.menu{
+    float:right;
+    padding-right: 16px;
+    padding-top: 15px;
+    height:25px
+}
+
+.banner{
+    padding-left: 16px;
+
+}
+.p1{
+width:300px;
+height:200px;
+padding-left: 14px;
+padding-right: 16px;
+}
+.first{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+hr{
+    height:2px;
+    border-width:0;
+    color:gray;
+    background-color:gray
+}
+
+.second{
+    padding-left: 16px;
+    padding-right: 16px;
+}
+
+.p2{
+    height:288px;
+    width:300;
+    padding-left:30px;
+    padding-right: 16px;
+}
+
+.p3{
+    height:288px;
+    width:300;
+}
