@@ -61,7 +61,6 @@ def ubuntu_filery():
                 full_path  = os.path.join(input_path,filename)
                 with open(full_path,"w") as file:
                     file.write("#nothingnew")
-                os.open(path=pathh,flags=os.O_CREAT)
                 print(f"Created the file filename-{i}.{month}.2024.md")
             print(f"All the files are stored in the path - {pathh[:-21]} ")
 
