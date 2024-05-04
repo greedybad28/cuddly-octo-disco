@@ -40,20 +40,29 @@ elif month == 4 or month == 6 or month == 9 or month == 11:
 ##################################################### I mean.. why are these up here??
 # time_now =datetime.datetime.now()
 # print()
-
+def decision(files_needed):
+    decision = str(input(f"DO you wanna continue makng {files_needed} files ??\n type YES or NO : "))
+    return decision
 
 def ubuntu_filery():
     date = int(time_now.strftime("%d"))
     files_needed = max_day_value - date
     print(f"You would need {files_needed} more files to suffice for this month's journal Progress.\n") 
-    decision = str(input(f"DO you wanna continue makng {files_needed} files ??\n type YES or NO : "))
-    if decision== "YES" or "yes" or "Yes":
-        input_path = str(input("Enter the path you need to create the files in\n Please use '/' when seperating directories\n \nEg:home/user/Desktop/test/ \n \n Make sure you end with a slash(/) \n \n Enter your path : "))
+    choice = decision(files_needed)
+    if choice.lower() =="yes":
+        try:
+
+            input_path = str(input("Enter the path you need to create the files in\n Please use '/' when seperating directories\n \nEg:home/user/Desktop/test/ \n \n Make sure you end with a slash(/) \n \n Enter your path : "))
+        except FileNotFoundError:
+            print("Enter correct path")
+            decision(files_needed)
         for i in range(date,max_day_value+1):
             pathh = f"{input_path}filename-{i}.{month}.2024.md"
             os.open(path=pathh,flags=os.O_CREAT)
             print(f"Created the file filename-{i}.{month}.2024.md")
         print(f"All the files are stored in the path - {pathh[:-21]} ")
+    elif choice.lower()=="no":
+       print("Okdamone")
     else:
        
        print("Pinne enthina myre program run aakye")
@@ -64,7 +73,7 @@ def windows_filery():
     num_of_files = max_day_value - date
     print(f"You would need {num_of_files} more files to suffice for this month's journal Progress....")
     decision = str(input("Do you want to continue making {files_needed} files\n TYPE YES OR NO : "))
-    if decision == "YES" or "Yes" or "yes":
+    if decision.lower()=="yes":
         input_path = str(input("Enter the path you need to create the files in\n N.B : Please use '/' when seperating directories with a slash\n\ \nexampple : R:/   Enter your Path : "))
         for i in range(date,max_day_value+1):
             pathh = f"{input_path}filename.{i}.{month}.2024.md"
