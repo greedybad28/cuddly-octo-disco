@@ -37,7 +37,7 @@ if month == 1 or month == 3 or month == 5 or month == 7 or month == 8 or month =
     max_day_value = 31
 elif month == 4 or month == 6 or month == 9 or month == 11:
     max_day_value = 30
-##################################################### I mean.. why are these up here??
+##########################################I mean.. why are these up here??
 # time_now =datetime.datetime.now()
 # print()
 def decision(files_needed):
@@ -50,22 +50,20 @@ def ubuntu_filery():
     print(f"You would need {files_needed} more files to suffice for this month's journal Progress.\n") 
     choice = decision(files_needed)
     if choice.lower() =="yes":
-        try:
+        input_path = str(input("Enter the path you need to create the files in\n Please use '/' when seperating directories\n \nEg:home/user/Desktop/test/ \n \n Make sure you end with a slash(/) \n \n Enter your path : "))
+        if not  os.path.exists(input_path):
+            print("PATH DOESN'T EXISTT BRO!")
+        else:
 
-            input_path = str(input("Enter the path you need to create the files in\n Please use '/' when seperating directories\n \nEg:home/user/Desktop/test/ \n \n Make sure you end with a slash(/) \n \n Enter your path : "))
-        except FileNotFoundError:
-            print("Enter correct path")
-            decision(files_needed)
-        for i in range(date,max_day_value+1):
-            pathh = f"{input_path}filename-{i}.{month}.2024.md"
-            os.open(path=pathh,flags=os.O_CREAT)
-            print(f"Created the file filename-{i}.{month}.2024.md")
-        print(f"All the files are stored in the path - {pathh[:-21]} ")
-    elif choice.lower()=="no":
-       print("Okdamone")
-    else:
-       
-       print("Pinne enthina myre program run aakye")
+            for i in range(date,max_day_value+1):
+                pathh = f"{input_path}filename-{i}.{month}.2024.md"
+                filename = f"filename-{i}.{month}.2024.md"
+                full_path  = os.path.join(input_path,filename)
+                with open(full_path,"w") as file:
+                    file.write("#nothingnew")
+                os.open(path=pathh,flags=os.O_CREAT)
+                print(f"Created the file filename-{i}.{month}.2024.md")
+            print(f"All the files are stored in the path - {pathh[:-21]} ")
 
 def windows_filery():
     date = int(time_now.strftime("%d"))
