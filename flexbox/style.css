@@ -4,11 +4,18 @@ body {
 }
 
 .container {
-    border: 6px solid rgb(0, 0, 0);
-    
+    border: 6px solid rgb(179, 43, 43);
+    display:  flex;
+    flex-direction:column;
+    flex-wrap: wrap-reverse;
+    justify-content: space-evenly;
+    height: 800px;
 }
 .flex-item {
-    color:cadetblue
+    color: green ;
+    font-size: larger;
+    padding:1rem;
+    text-align: center;
 }
  
 .item-1 {
@@ -23,4 +30,19 @@ body {
 }
 .item-4 {
     background-color: rebeccapurple;
+}
+.item-5 {
+    background-color: orangered ;
+}
+.item-6 {
+    background-color: aqua;
+}
+.item-7 {
+    background-color:gold  ;
+}
+.item-8 {
+    background-color: powderblue;
+}
+.item-9 {
+    background-color: indigo;
 }
