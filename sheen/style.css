@@ -38,17 +38,19 @@ li,a {
 
 .nav-links li,a,.logo {
     list-style:none;
-    display: inline-block;
-    padding: 0px 20px;
+    
+    padding: 0px 30px;
     transition: all 0.3s ease-in-out;
-
+    margin-left:a;
 }
 
 .srch {
+    margin-left: 50px;
     width: 32px;
     height: 32px;
 }
 .moon {
+    margin-left: 20px;
     width: 25px;
     height: 24px;
 }
