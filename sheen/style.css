@@ -2,16 +2,25 @@
     box-sizing: border-box;
     margin: 0;
     padding:0;
-    background-color: whitesmoke;
+    background-color: rgb(255, 255, 255);
 }
 header {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
     padding: 30px 0px;
 
 }
+.nav-logo {
+    display: inline-flex;
+    justify-content: flex-end;
+}
+.nav-links {
+    margin-left: auto;
+    display: inline-flex;
+    justify-content:space-evenly;
+    padding-left: 20px;
+}
+
 li,a {
     font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 16px;
@@ -24,10 +33,6 @@ li,a {
     cursor:pointer;
     padding-left: 0px;
 }
-.logo:hover {
-    transition: padding-left 1s ease;
-    padding-left: 30px;
-}
 
 
 
@@ -39,26 +44,11 @@ li,a {
 
 }
 
-
-
-.nav-links li a:hover {
-    color: #0088a9;
-    padding-inline: 10px;
-    
-
-    
+.srch {
+    width: 32px;
+    height: 32px;
 }
-.contact-button {
-    background-color: purple;
-    border-radius: 5px;
-    font-weight: bold;
-    font-size: 18px;
-    font-family: monospace;
-    color: white;
-    padding: 20px;
-    margin-left: 10px;
-    text-align: center;
-    cursor: pointer;
-
+.moon {
+    width: 25px;
+    height: 24px;
 }
-
