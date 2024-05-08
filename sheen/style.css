@@ -11,8 +11,8 @@ header {
 
 }
 .nav-logo {
-    display: inline-flex;
-    justify-content: flex-end;
+    display: flex;
+    justify-content: space-evenly;
 }
 .nav-links {
     margin-left: auto;
@@ -31,7 +31,7 @@ li,a {
 }
 .logo {
     cursor:pointer;
-    padding-left: 0px;
+
 }
 
 
@@ -50,7 +50,15 @@ li,a {
     height: 32px;
 }
 .moon {
-    margin-left: 20px;
+    margin-left: 50px;
+    margin-right: 50px;
     width: 25px;
     height: 24px;
+}
+
+.section-1 {
+    padding: 100px;
+}
+.bullet {
+    list-style: decimal;
 }
