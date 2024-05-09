@@ -10,16 +10,16 @@ header {
     padding: 30px 0px;
 
 }
-.nav-logo {
-    display: flex;
-    justify-content: space-evenly;
-}
+
+
 .nav-links {
     margin-left: auto;
     display: inline-flex;
     justify-content:space-evenly;
     padding-left: 20px;
+    cursor: pointer;
 }
+
 
 li,a {
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -27,21 +27,21 @@ li,a {
     color: rgb(0, 0, 0);
     text-decoration: none;
     font-weight: 500;
-    
+    transition: color 0.5s ease-in-out;
+}
+a:hover{
+    color: blue;
 }
 .logo {
     cursor:pointer;
 
 }
-
-
-
-.nav-links li,a,.logo {
+.nav-links a,.logo {
     list-style:none;
+
+    padding: 0px 20px;
     
-    padding: 0px 30px;
-    transition: all 0.3s ease-in-out;
-    margin-left:a;
+    
 }
 
 .srch {
@@ -57,7 +57,7 @@ li,a {
 }
 
 .section-1 {
-    padding: 100px;
+    padding: 90px;
 }
 .bullet {
     list-style: decimal;
