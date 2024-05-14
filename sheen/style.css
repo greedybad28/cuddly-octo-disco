@@ -16,7 +16,7 @@ header {
     margin-left: auto;
     display: inline-flex;
     justify-content:space-evenly;
-    padding-left: 20px;
+
     cursor: pointer;
 }
 
@@ -36,7 +36,7 @@ a:hover{
     cursor:pointer;
 
 }
-.nav-links a,.logo {
+.nav-links a {
     list-style:none;
 
     padding: 0px 20px;
@@ -44,17 +44,7 @@ a:hover{
     
 }
 
-.srch {
-    margin-left: 50px;
-    width: 32px;
-    height: 32px;
-}
-.moon {
-    margin-left: 50px;
-    margin-right: 50px;
-    width: 25px;
-    height: 24px;
-}
+
 
 .section-1 {
     padding: 90px;
