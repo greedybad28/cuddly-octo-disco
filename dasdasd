@@ -1,0 +1,37 @@
+[1mdiff --git a/sheen/index.html b/sheen/index.html[m
+[1mindex 8dc9033..afb8270 100644[m
+[1m--- a/sheen/index.html[m
+[1m+++ b/sheen/index.html[m
+[36m@@ -38,11 +38,6 @@[m
+ [m
+ [m
+ [m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+[31m-[m
+ [m
+ [m
+ [m
+[1mdiff --git a/sheen/style.css b/sheen/style.css[m
+[1mindex b462058..8bd39e8 100644[m
+[1m--- a/sheen/style.css[m
+[1m+++ b/sheen/style.css[m
+[36m@@ -45,13 +45,13 @@[m [ma:hover{[m
+ }[m
+ [m
+ .srch {[m
+[31m-    margin-left: 50px;[m
+[32m+[m[32m    margin-left: 30px;[m
+     width: 32px;[m
+     height: 32px;[m
+ }[m
+ .moon {[m
+[31m-    margin-left: 50px;[m
+[31m-    margin-right: 50px;[m
+[32m+[m[32m    margin-left: 20px;[m
+[32m+[m[32m    margin-right: 20px;[m
+     width: 25px;[m
+     height: 24px;[m
+ }[m
